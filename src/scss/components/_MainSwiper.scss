@@ -1,0 +1,25 @@
+@use "../index" as *;
+
+.mySwiper {
+  height: auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.mySwiper .swiper-slide {
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.main-swiper-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}

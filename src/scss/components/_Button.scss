@@ -1,0 +1,31 @@
+@use "../index" as *;
+
+.button {
+  background-color: #000000;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  width: fit-content;
+  padding: 13px 22px;
+  min-width: 140px;
+  text-align: center;
+  display: block;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+
+  &__width-auto {
+    width: auto;
+  }
+}
+
+.buttons-row {
+  display: flex;
+  row-gap: 10px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}

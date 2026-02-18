@@ -1,0 +1,17 @@
+@use "../_index.scss" as *;
+
+.news-item {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &__title,
+  &__date {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+  }
+}

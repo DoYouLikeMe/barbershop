@@ -1,0 +1,10 @@
+@use "../index" as *;
+
+.burger-menu {
+  width: 15px;
+  display: block;
+
+  @include media-query($starts-from-tablet) {
+    display: none;
+  }
+}

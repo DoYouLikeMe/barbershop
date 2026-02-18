@@ -1,0 +1,10 @@
+@use "../index" as *;
+
+.main-logo-wrapper {
+  max-width: 368px;
+
+  &_centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

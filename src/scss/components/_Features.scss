@@ -1,0 +1,14 @@
+@use "../index" as *;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 20px;
+
+  @include media-query($starts-from-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 40px;
+  }
+}

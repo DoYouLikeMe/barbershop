@@ -1,0 +1,44 @@
+@use "../index" as *;
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-image: url("/images/footer-bg.png");
+  background-repeat: repeat;
+  background-size: auto;
+
+  @include media-query($starts-from-medium-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include media-query($starts-from-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include media-query($starts-from-tablet) {
+      align-items: center;
+    }
+  }
+
+  &__paragraph {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 16px;
+  }
+}

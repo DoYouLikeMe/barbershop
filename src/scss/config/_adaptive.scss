@@ -1,0 +1,10 @@
+$starts-from-tablet: 768px;
+$starts-from-small-desktop: 1024px;
+$starts-from-medium-desktop: 1200px;
+$starts-from-widescreen: 1440px;
+
+@mixin media-query($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

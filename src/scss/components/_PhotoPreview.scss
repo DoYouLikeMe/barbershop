@@ -1,0 +1,21 @@
+@use "../index" as *;
+
+.photo-preview {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: space-between;
+
+    @include media-query($starts-from-tablet) {
+      display: flex;
+    }
+  }
+}

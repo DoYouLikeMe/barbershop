@@ -1,0 +1,78 @@
+@use "./_index" as *;
+@use "./components/_Header" as *;
+@use "./components/_Navigation" as *;
+@use "./components/_BurgerMenu" as *;
+@use "./components/_Footer" as *;
+@use "./components/_Social" as *;
+@use "./components/_Button" as *;
+@use "./components/_MainLogo" as *;
+@use "./components/_Features" as *;
+@use "./components/_FeautureItem" as *;
+@use "./components/_PaperBlock" as *;
+@use "./components/_NewsPreview" as *;
+@use "./components/_NewsItem" as *;
+@use "./components/_PhotoPreview" as *;
+@use "./components/_MainSwiper" as *;
+@use "./components/_MainForm" as *;
+
+html,
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $main-bg;
+
+  font-family: $main-font;
+  font-weight: 400;
+  color: $main-font-color;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+
+.container {
+  max-width: $container-width;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include media-query($starts-from-medium-desktop) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  @include media-query($starts-from-medium-desktop) {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.svg-inline--fa {
+  height: auto;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.main-bg {
+  background-color: #000000;
+  padding-top: 20px;
+  background-image: url("/images/main-page-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  @include media-query($starts-from-medium-desktop) {
+    padding-top: 50px;
+  }
+}

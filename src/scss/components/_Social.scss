@@ -1,0 +1,20 @@
+@use "../_index.scss" as *;
+
+.social {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+
+  &__link {
+    display: flex;
+    color: inherit;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 5px;
+    background-color: #000;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+}

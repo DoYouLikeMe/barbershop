@@ -1,0 +1,43 @@
+@use "../index" as *;
+
+.feature-item {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @include media-query($starts-from-medium-desktop) {
+    gap: 40px;
+  }
+
+  &__heading {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1;
+    gap: 20px;
+
+    @include media-query($starts-from-medium-desktop) {
+      gap: 45px;
+      font-size: 42px;
+    }
+
+    &::after {
+      content: "";
+      display: flex;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      transform: rotate(45deg);
+
+      @include media-query($starts-from-medium-desktop) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
