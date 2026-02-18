@@ -3,20 +3,26 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+
+import clsx from "clsx";
+
 export default function HeaderLogo() {
   const path = usePathname();
-  const isMainPage = path === "/";
+  const isHiddenOnDesktop = path === "/";
 
-  if (!isMainPage) {
-    return (
-      <Link href="/">
-        <Image
-          width={111}
-          height={22}
-          src="/images/header-logo.png"
-          alt="Barbershop"
-        />
-      </Link>
-    );
-  }
+  return (
+    <Link
+      className={clsx("main-logo", {
+        "main-logo_hidden-desktop": isHiddenOnDesktop,
+      })}
+      href="/"
+    >
+      <Image
+        width={111}
+        height={22}
+        src="/images/header-logo.png"
+        alt="Barbershop"
+      />
+    </Link>
+  );
 }

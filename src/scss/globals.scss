@@ -76,3 +76,13 @@ body {
     padding-top: 50px;
   }
 }
+
+.main-logo {
+  &_hidden-desktop {
+    display: flex;
+
+    @include media-query($starts-from-medium-desktop) {
+      display: none;
+    }
+  }
+}
