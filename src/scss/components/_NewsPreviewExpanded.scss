@@ -1,0 +1,60 @@
+@use "../_index.scss" as *;
+
+.news-expanded {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    @include media-query($starts-from-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+
+    @include media-query($starts-from-tablet) {
+      font-size: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+
+    @include media-query($starts-from-tablet) {
+      gap: 14px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__date {
+    align-self: flex-end;
+  }
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
