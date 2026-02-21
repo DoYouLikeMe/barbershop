@@ -1,0 +1,12 @@
+@use "../_index.scss" as *;
+
+.main-heading {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @include media-query($starts-from-tablet) {
+    font-size: 22x;
+  }
+}

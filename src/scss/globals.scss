@@ -14,6 +14,9 @@
 @use "./components/_PhotoPreview" as *;
 @use "./components/_MainSwiper" as *;
 @use "./components/_MainForm" as *;
+@use "./components/_InnerPage" as *;
+@use "./components/_MainHeading" as *;
+@use "./components/_Breadcrumbs" as *;
 
 html,
 body {
@@ -23,9 +26,9 @@ body {
 
 body {
   background-color: $main-bg;
-
+  text-transform: uppercase;
   font-family: $main-font;
-  font-weight: 400;
+  font-weight: 700;
   color: $main-font-color;
   margin: 0;
   padding: 0;
@@ -50,10 +53,8 @@ body {
 .vertical-container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   @include media-query($starts-from-medium-desktop) {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
     width: 100%;
     max-width: 100%;
   }
