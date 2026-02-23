@@ -19,6 +19,9 @@
 @use "./components/_Breadcrumbs" as *;
 @use "./components/_NewsPreviewExpanded" as *;
 @use "./components/_SecondaryTitle" as *;
+@use "./components/_H3" as *;
+@use "./components/_ContentList" as *;
+@use "./components/_ContentTable" as *;
 
 html,
 body {
@@ -88,4 +91,41 @@ body {
       display: none;
     }
   }
+}
+
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  @include media-query($starts-from-tablet) {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 60px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content-column {
+  @include media-query($starts-from-tablet) {
+    max-width: 465px;
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.r-width-382 {
+  @include restrictWidth(382, $starts-from-tablet);
+}
+
+.r-width-425 {
+  @include restrictWidth(425, $starts-from-tablet);
 }

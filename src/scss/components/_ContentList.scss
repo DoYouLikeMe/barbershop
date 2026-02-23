@@ -1,0 +1,21 @@
+@use "../index" as *;
+
+.content-list {
+  padding: 0 0 0 26px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__item {
+    position: relative;
+
+    &::before {
+      @include decorative-square;
+    }
+  }
+
+  @include media-query($starts-from-tablet) {
+    gap: 25px;
+  }
+}

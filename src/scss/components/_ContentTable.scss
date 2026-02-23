@@ -1,0 +1,14 @@
+@use "../index" as *;
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  td {
+    border: 2px solid #000;
+    padding: 10px;
+
+    &:nth-child(2n) {
+      text-align: center;
+    }
+  }
+}

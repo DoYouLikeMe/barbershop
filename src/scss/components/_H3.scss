@@ -1,0 +1,13 @@
+@use "../index" as *;
+
+.h3 {
+  font-size: 18px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include media-query($starts-from-tablet) {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
